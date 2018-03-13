@@ -16,7 +16,7 @@ public class Baraban implements Instrument {
     }
 
     public void play() {
-        System.out.println("Играет барабан!");
+        System.out.println("Играет барабан! " + rasmer + " размер");
     }
 
     @Override

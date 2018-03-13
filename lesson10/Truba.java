@@ -16,7 +16,7 @@ public class Truba implements Instrument {
     }
 
     public void play() {
-        System.out.println("Играет труба!");
+        System.out.println("Играет труба! " + diametr + " диаметр");
     }
 
     @Override
