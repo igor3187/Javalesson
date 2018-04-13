@@ -1,4 +1,4 @@
-package com.company;
+package com.company.lesson4;
 
 public class For1 {
     public static void main(String[] args) {
