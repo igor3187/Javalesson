@@ -1,11 +1,10 @@
 package com.company.lesson7;
 
-import java.util.SortedMap;
+
 
 public class Phone {
     private static int count;
-    private String number;
-    private String model;
+    private String number,model;
     private double weight;
 
     Phone(String number, String model, double weight) {
@@ -17,14 +16,13 @@ public class Phone {
         number = n;
         model = m;
         count++;
-
     }
 
     Phone() {
         count++;
     }
 
-    static int getCount(){
+    static int getCount() {
         return count;
     }
 
@@ -52,8 +50,7 @@ public class Phone {
         this.weight = weight;
     }
 
-    void receiveCall(String name) {
-        System.out.println("Call " + name);
+    void receiveCall(String name) { System.out.println("Call " + name);
     }
 
     void receiveCall(String name, String number) {
@@ -61,7 +58,7 @@ public class Phone {
     }
 
     void sendMessage(String... numbers) {
-        System.out.println("Соообщение отправлено ");
+        System.out.println("Соообщение отправлено: ");
         for (String number : numbers) {
             System.out.println(number + ", ");
         }

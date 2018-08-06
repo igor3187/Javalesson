@@ -5,13 +5,7 @@ import java.util.Objects;
 public class Book implements Printable{
     private String name;
 
-    static void printBook(Printable[] printables) {
-        for (Printable printable : printables) {
-            if (printable instanceof Book) {
-                System.out.println(((Book) printable).getName());
-            }
-        }
-    }
+
 
     public Book(String name) {
         this.name = name;
@@ -23,6 +17,14 @@ public class Book implements Printable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static void printBook(Printable[] printables) {
+        for (Printable printable : printables) {
+            if (printable instanceof Book) {
+                System.out.println(((Book) printable).getName());
+            }
+        }
     }
 
     @Override

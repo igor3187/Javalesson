@@ -1,6 +1,6 @@
-package com.company.lesson4;
+package com.company.lesson5;
 
-public class ifElseIf {
+public class IfElseIf {
     public static void main(String[] args) {
         int i = Integer.parseInt(args[0]);
         if (i == 1) {
@@ -14,10 +14,8 @@ public class ifElseIf {
         } else if (i == 5) {
             System.out.println("Friday");
         } else if (i == 6 || i == 7) {
-            System.out.println("It's Weekend!!");
-        } else {
-            System.out.println("Incorrect enter");
+            System.out.println("It's weekend!");
+
         }
     }
 }
-
