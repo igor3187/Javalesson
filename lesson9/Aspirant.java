@@ -1,12 +1,18 @@
 package com.company.lesson9;
 
-public class Aspirant extends Student {
+import java.io.Serializable;
+
+public class Aspirant extends Student implements Serializable {
     private String cienceWork;
 
 
     public Aspirant(String firstName, String lastName, String group, double averageMark, String cienceWork) {
         super(firstName, lastName, group, averageMark);
         this.cienceWork = cienceWork;
+
+    }
+
+    public Aspirant() {
 
     }
 

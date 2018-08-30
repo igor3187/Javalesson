@@ -23,6 +23,8 @@ public class User {
     public void createQuery() {
         Query query = new Query();
         query.printToLOg();
+
+
     }
 
     public User(String login, String password) {
@@ -40,7 +42,7 @@ public class User {
         query.printToLOg();
     }
 
-    public class Query {
+     class Query {
         public void printToLOg() {
             System.out.printf("User %s with password %s send a query.\n",login,password);
         }
