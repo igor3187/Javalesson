@@ -7,15 +7,16 @@ import java.io.IOException;
 public class FileReaderWriter {
     public static void main(String[] args) {
 
-
-        try (FileReader fileReader = new FileReader("src//fileWrite.txt");
+        //File file = new File("a.txt");
+        try (FileReader fileReader = new FileReader("a.txt");
              FileWriter fileWriter = new FileWriter("b.txt")) {
-            int c;
-            while ((c = fileReader.read()) != -1) {
 
-                System.out.print((char) c);
-                fileWriter.write(c);
+            char[] ch = new char[50];
+            int size = fileReader.read(ch);
+            for (int i = 0; i < size; i++) {
+                fileWriter.write(ch[i]);
             }
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
