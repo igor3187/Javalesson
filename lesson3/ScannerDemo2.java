@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ScannerDemo2 {
 
-    static int i,x;
+    private static int i,x;
 
     public static void main(String[] args) {
 

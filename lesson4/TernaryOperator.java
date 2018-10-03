@@ -4,24 +4,29 @@ import java.util.Scanner;
 
 public class TernaryOperator {
     public static void main(String[] args) {
-        System.out.println("Введите любое чило");
 
         Scanner s = new Scanner(System.in);
+        int i = 0, e = 0, r = 0;
+        int x;
+
+        System.out.println("Введите любое чило:");
 
         if (s.hasNextInt()) {
-            int i = s.nextInt();
-            System.out.println("Ведите второе число");
+            i = s.nextInt();
+            System.out.println("Ведите второе число:");
         }
         if (s.hasNextInt()) {
 
-            int e = s.nextInt();
-            System.out.println("Ведите третье число");
+            e = s.nextInt();
+            System.out.println("Ведите третье число:");
         }
-        if (s.hasNextInt()){
-            int r = s.nextInt();
+        if (s.hasNextInt()) {
+            r = s.nextInt();
 
         }
+        x = i < e && i < r ? i : e < i && e < r ? e : r < i && r < e ? r : r;
 
+        System.out.println("Меньшее из трех введенных чисел: " + x);
     }
 
 }

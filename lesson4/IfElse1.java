@@ -8,6 +8,10 @@ public class IfElse1 {
         int x;
         System.out.print("Enter number : ");
         x = scan.nextInt();
+        getNum(x);
+    }
+
+    private static void getNum(int x) {
         if (x <= 10) {
             System.out.println("Number is less then 10 or equal to.");
         } else {
