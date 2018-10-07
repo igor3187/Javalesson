@@ -1,12 +1,14 @@
 package com.company.lesson5;
 
-/*
+import java.util.Scanner;
+
 public class SwitchDemo {
     public static void main(String[] args) {
+
         Scanner s = new Scanner(System.in);
         System.out.println("enter day number");
-        if ( int i = s.hasNextInt()){
-            switch (args[i]) {
+        if (s.hasNextInt()){
+            switch (args[0]) {
                 case "1":
                     System.out.println("Monday");
                     break;
@@ -31,4 +33,4 @@ public class SwitchDemo {
             }
         }
     }
-}*/
+}

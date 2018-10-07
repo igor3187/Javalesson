@@ -8,15 +8,23 @@ public class MyGarland {
 
         int i = 32;
 
-        int b = blink(~i);
+        System.out.println("Выберите количество итераций ");
+        Scanner s = new Scanner(System.in);
 
-        int c = run(i);
+        getKol(s);
 
-        int d = getMask(i);
+        garlandMode(i, s);
+    }
+
+    private static void getKol(Scanner s) {
+        if (s.hasNextInt()) {
+            s.nextInt();
+        }
+    }
+
+    private static void garlandMode(int i, Scanner s) {
 
         System.out.println("Выберите режим: 1 - 4 ");
-
-        Scanner s = new Scanner(System.in);
 
         if (s.hasNextInt()) {
 
@@ -27,29 +35,34 @@ public class MyGarland {
                     System.out.println("Лампа включена " + Integer.toBinaryString(i));
                     break;
                 case 2:
-                    System.out.println("Лампа мигнула " + Integer.toBinaryString(b));
+                    blink(i);//лампа мигнула
                     break;
                 case 3:
-                    System.out.println("Режим бегущей строки " + Integer.toBinaryString(c));
+                    run(i);//бегущая строка
                     break;
                 case 4:
-                    System.out.println("Режим маски " + Integer.toBinaryString(d));
+                    getMask(i & 2);
             }
-
         }
-
     }
 
-    private static int getMask(int i) {
-        return i & 2;
+    private static void getMask(int i) {
+        System.out.println("Режим маски " + Integer.toBinaryString(i));
     }
 
-    private static int run(int i) {
-        return i << 2;
+    private static void run(int i) {
+        System.out.println("Бегущая строка ");
+        for (int j = 0; j < 10; j++) {
+            i = i << 1;
+            System.out.println(Integer.toBinaryString(i));
+        }
     }
 
-    private static int blink(int i2) {
-        return i2;
+    private static void blink(int i) {
+        System.out.println("Лампа мигнула ");
+        for (int j = 0; j < 10; j++) {
+            i = ~i;
+            System.out.println(Integer.toBinaryString(i));
+        }
     }
-
 }
