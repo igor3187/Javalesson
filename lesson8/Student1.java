@@ -12,6 +12,9 @@ public class Student1 {
         this.averageMark = averageMark;
     }
 
+    public Student1(String vanya, String pupkin, String s, double v, String science) {
+    }
+
     public String getFirstName() {
         return firstName;
     }

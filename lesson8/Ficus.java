@@ -1,7 +1,7 @@
 package com.company.lesson8;
 
-public class Ficus extends Flower{
-    double price = 1.00;
-    String country = "Greece";
-    int shelfLifeDay = 14;
+public class Ficus extends Flower {
+    public Ficus(String country, int shelfLifeDay, double price) {
+        super(country, shelfLifeDay, price);
+    }
 }

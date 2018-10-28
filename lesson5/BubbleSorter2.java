@@ -9,10 +9,9 @@ public class BubbleSorter2 {
 
         for (int i = 0; i < massive.length; i++) {
             massive[i] = (int) (Math.random() * 100);
-
-            Arrays.sort(massive);
-
-            System.out.println(Arrays.toString(massive));
         }
+
+        Arrays.sort(massive);
+        System.out.println(Arrays.toString(massive));
     }
 }

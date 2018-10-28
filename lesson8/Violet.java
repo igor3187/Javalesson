@@ -1,7 +1,7 @@
 package com.company.lesson8;
 
 public class Violet extends Flower {
-    double price = 0.90;
-    String country = "Austria";
-    int shelfLifeDay = 4;
+    public Violet(String country, int shelfLifeDay, double price) {
+        super(country, shelfLifeDay, price);
+    }
 }
