@@ -9,12 +9,13 @@ public class NewSeasonDemo {
         printSeason(NewSeason.WINTER);
 
         printAllSeason();
+
     }
 
     private static void printAllSeason() {
         NewSeason[] seasons = NewSeason.values();
         for (NewSeason s : seasons) {
-            System.out.println(s);
+            System.out.println(s.getInfo() + " " + s.getDescription());
         }
     }
 

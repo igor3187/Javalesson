@@ -1,21 +1,58 @@
 package com.company.lesson10;
 
-public enum Clothes {
-    XXS(32) {
-        String getDescription() {
-            return "Детский размер";
-        }
-    }, XS(34), S(36), M(38), L(40);
+import java.util.Objects;
 
-    String getDescription() {
+public abstract class Clothes {
 
-        return "Взрослый размер";
+    private Size clothesSize;
+    private double cost;
+    private String color;
+
+    Clothes(Size clothesSize, double cost, String color) {
+        this.clothesSize = clothesSize;
+        this.cost = cost;
+        this.color = color;
     }
 
-    private int euroSize;
+    private Size getClothesSize() {
+        return clothesSize;
+    }
 
-    Clothes(int euroSize) {
-        this.euroSize = euroSize;
+    private void setClothesSize(Size clothesSize) {
+        this.clothesSize = clothesSize;
+    }
+
+    private double getCost() {
+        return cost;
+    }
+
+    private void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    private String getColor() {
+        return color;
+    }
+
+    private void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Clothes)) return false;
+        Clothes clothes = (Clothes) o;
+        return Double.compare(clothes.getCost(), getCost()) == 0 && getClothesSize() == clothes.getClothesSize() && Objects.equals(getColor(), clothes.getColor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getClothesSize(), getCost(), getColor());
+    }
+
+    @Override
+    public String toString() {
+        return "Clothes{" + "clothesSize=" + clothesSize + ", cost=" + cost + ", color='" + color + '\'' + '}';
     }
 }
-
