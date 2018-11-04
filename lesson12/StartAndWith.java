@@ -2,7 +2,7 @@ package com.company.lesson12;
 
 public class StartAndWith {
     public static void main(String[] args) {
-        String s = new String("I like Java!!!");
+        String s = "I like Java!!!";
 
         startWith(s);
         endWith(s);

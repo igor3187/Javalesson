@@ -5,7 +5,8 @@ public class WrapperDemo {
         Double aDouble = 3.14;
         Double aDouble1 = 3.14;
         Double aDouble2 = Double.valueOf("3.14");
-        Double aDouble3 = 3.14;
+        Double aDouble3;
+        aDouble3 = Double.parseDouble("3,11");
         Double aDouble4 = Double.parseDouble("3.2");
         int d = aDouble4.intValue();
         System.out.println(aDouble4);
