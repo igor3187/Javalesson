@@ -9,11 +9,12 @@ public class FormatDemo {
 
         /*f.format("Student %s have an %d in subject %s", "Sidorov", 5, "math");
         System.out.println(f);*/
+        System.out.printf("Student %s have an %d in subject %s", "Petrov", 5, "bology");
     }
 
     private static void print(String name, int mark, String subject) {
         Formatter formatter = new Formatter();
-        formatter.format("Student %s have an %d in subject %s", name, mark, subject);
+        formatter.format("Student %15s have an %3d in subject %10s", name, mark, subject);
         System.out.println(formatter);
     }
 }

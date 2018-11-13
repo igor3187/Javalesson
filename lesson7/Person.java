@@ -19,6 +19,7 @@ public class Person {
 
     private void talk(String fullName, int age) {
         System.out.println("My name is " + fullName + " and my age is " + age);
+
     }
 
     public static void main(String[] args) {
@@ -29,5 +30,10 @@ public class Person {
         person.move();
         System.out.println("Hi my name is " + person1.fullName + " and my age is " + person1.age);
         person1.move();
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "fullName='" + fullName + '\'' + ", age=" + age + '}';
     }
 }

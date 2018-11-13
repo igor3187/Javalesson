@@ -8,7 +8,7 @@ public class Replace {
     }
 
     private static void replace(StringBuilder stringBuilder) {
-        String str = "Object oriented programming";
+        String str = "Object oriented programing";
         System.out.println("Before replace: " + str);
         stringBuilder.replace(0,str.length(), "OOP ");
         System.out.println("After replace: " + stringBuilder);

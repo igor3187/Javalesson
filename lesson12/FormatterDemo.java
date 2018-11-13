@@ -6,7 +6,6 @@ import java.util.Formatter;
 public class FormatterDemo {
     public static void main(String[] args) {
 
-
         formatterDemo("Иванов", '8', "Предмет");
 
     }
@@ -17,5 +16,4 @@ public class FormatterDemo {
 
         System.out.println(f);
     }
-
 }
