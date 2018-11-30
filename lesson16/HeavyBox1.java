@@ -8,15 +8,27 @@ public class HeavyBox1 extends Box6 implements Comparable<HeavyBox1> {
         this.weight = weight;
     }
 
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public HeavyBox1(int weight) {
+        this.weight = weight;
+    }
+
+    public HeavyBox1(double len, int weight) {
+        super(len);
+        this.weight = weight;
+    }
+
     public HeavyBox1() {
         this.weight = -1;
     }
 
+
     @Override
     public String toString() {
-        return "HeavyBox1{" +
-                "weight=" + weight +
-                '}';
+        return "HeavyBox1{" + "weight=" + weight + ", width=" + width + ", height=" + height + ", depth=" + depth + "} ";
     }
 
     @Override

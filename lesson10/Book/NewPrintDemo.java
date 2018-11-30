@@ -5,8 +5,10 @@ public class NewPrintDemo {
 
         NewPrintable newBook = new NewBook("Adventures");
         NewPrintable newMagazine = new NewMagazine("Maxim");
+        NewPrintable newsPaper = () -> System.out.println("Print a news paper");
 
-        NewPrintable[] newPrintables = {newBook, newMagazine};
+
+        NewPrintable[] newPrintables = {newBook, newMagazine, newsPaper};
         for (NewPrintable newPrintable : newPrintables) {
             newPrintable.print();
         }

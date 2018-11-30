@@ -3,20 +3,12 @@ package com.company.lesson4;
 import java.util.Scanner;
 
 public class MyGarland {
-
     public static void main(String[] args) {
-
+        System.out.println("Приложение герлянда.");
         int i = 32;
 
-        System.out.println("Выберите количество итераций ");
         Scanner s = new Scanner(System.in);
-
-        getKol(s);
-
         garlandMode(i, s);
-    }
-
-    private static void getKol(Scanner s) {
         if (s.hasNextInt()) {
             s.nextInt();
         }
@@ -24,24 +16,30 @@ public class MyGarland {
 
     private static void garlandMode(int i, Scanner s) {
 
-        System.out.println("Выберите режим: 1 - 4 ");
+        System.out.println("Выберите режим герлянды: 1 - Мигнуть лампочками. 2 - Режим бегущей строки. 3 - Режим маски. 4 - Текущее состояние герлянды. ");
 
         if (s.hasNextInt()) {
-
             int k = s.nextInt();
 
             switch (k) {
                 case 1:
-                    System.out.println("Лампа включена " + Integer.toBinaryString(i));
+                    blink(i);
                     break;
                 case 2:
-                    blink(i);//лампа мигнула
+                    run(i);
                     break;
                 case 3:
-                    run(i);//бегущая строка
+                    getMask(i);
                     break;
                 case 4:
-                    getMask(i & 2);
+                    System.out.println("Лампа включена " + Integer.toBinaryString(i));
+                default:
+                    if (k > 4) {
+                        System.out.println("Не верный режим! Выберите режим от 1 до 4:");
+                        garlandMode(i, s);
+                    } else {
+                        System.exit(0);
+                    }
             }
         }
     }

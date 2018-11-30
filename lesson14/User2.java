@@ -2,10 +2,10 @@ package com.company.lesson14;
 
 
 public class User2 {
-    private String login;
-    private String password;
+    private static String login;
+    private static String password;
 
-    public String getLogin() {
+    /*public String getLogin() {
         return login;
     }
 
@@ -19,9 +19,21 @@ public class User2 {
 
     public void setPassword(String password) {
         this.password = password;
+    }*/
+
+    static class Query{
+        public void printToLOg(){
+            System.out.println(login);
+            System.out.println(password);
+        }
     }
 
-    public void createQuery() {
+    public static void createQuery(){
+        Query query = new Query();
+        query.printToLOg();
+    }
+
+   /* public void createQuery() {
 
         class Query {
 
@@ -32,21 +44,25 @@ public class User2 {
             Query query = new Query();
 
         }
-    }
+    }*/
 
-    public User2(String login, String password) {
+    /*p*//*ublic User2(String login, String password) {
 
         this.login = login;
         this.password = password;
     }
-
+*/
     public static void main(String[] args) {
-        User2 user = new User2("login1", "password1");
+       /* Use*//*r2 user = new User2("login1", "password1");
         User user1 = new User("login2", "password2");
         user.createQuery();
 
         User.Query query = user1.new Query();
+        query.printToLOg();*/
+
+        User2.Query query = new User2.Query();
         query.printToLOg();
+        createQuery();
     }
 
 }

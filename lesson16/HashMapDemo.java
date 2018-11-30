@@ -15,7 +15,6 @@ public class HashMapDemo {
         System.out.println(map.get("Car"));
 
         enumerateValues(map);
-
         collectionValues(map);
 
         Set<Map.Entry<String, Toy>> set = map.entrySet();
@@ -23,8 +22,13 @@ public class HashMapDemo {
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
         }
-    }
 
+        /*set.forEach((entry)) ->{
+                System.out.println(entry.getKey());
+        System.out.println(entry.getValue());
+        };*/
+
+    }
 
     private static void collectionValues(Map<String, Toy> map) {
         Set<String> keys = map.keySet();
