@@ -9,7 +9,6 @@ public class DoubleArrayMinMax {
 
         int[][] minMax = new int[5][2];
 
-
         for (int i = 0; i < msv.length; i++) {
             int min = msv[i][0];
             int max = msv[i][0];
@@ -20,29 +19,13 @@ public class DoubleArrayMinMax {
                 if (max > msv[i][j]) {
                     max = msv[i][j];
                 }
-                /*for (int i1 = 0; i1 < minMax.length; i1++){
-                    for (int j1 = 0; j1 < minMax[i1].length; j1++);
-                }*/
-                //System.arraycopy(msv, 0, minMax, 0, 2);
-                for (int i1 = 0; i1 < minMax.length; i1++) {
-                   // System.out.println(minMax[i1] + " ");
-                }
-
+                for (int i1 = 0; i1 < minMax.length; i1++);
             }
             minMax[i][0] = min;
             minMax[i][1] = max;
 
-
-            //Arrays.sort(msv);
-
-            // int min = msv[0][0];
-            //int max = msv[msv.length - 1][msv.length - 1];
-            //System.out.println(min);
-            //System.out.println(max);
             System.out.println(Arrays.deepToString(msv));
             System.out.println(Arrays.deepToString(minMax));
-
-
         }
     }
 }

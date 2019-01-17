@@ -2,43 +2,41 @@ package com.company.lesson10;
 
 public class SeasonDemo {
     public static void main(String[] args) {
-        Season season = Season.AUTUMN;
-        print(season);
-        print(Season.SUMMER);
-        print1();
-        print2();
+        Season season = Season.SUMMER;
+        Season season1 = Season.SPRING;
+        System.out.println(season);
+        System.out.println(season1);
+
+        printSeason(Season.SUMMER);
+        printAllSeasons();
+        Season season2 = Season.valueOf("WINTER");
+        System.out.println(season2);
 
     }
-    public static void print(Season season){
-        switch (season){
+
+
+
+    public static void printAllSeasons() {
+        Season[] seasons = Season.values();
+        for (Season s : seasons) {
+            System.out.println(s.ordinal());
+            System.out.println(s + " overage temp: " + s.getTemp() + " " + s.getDescription());
+        }
+    }
+
+    public static void printSeason(Season season) {
+        switch (season) {
             case WINTER:
-                System.out.println("Love Winter");
+                System.out.println("Love Winter!");
                 break;
-
             case SPRING:
-                System.out.println("Love Spring");
+                System.out.println("Love Spring!");
                 break;
-
             case SUMMER:
-                System.out.println("Love Summer");
+                System.out.println("Love Summer!");
                 break;
-
             case AUTUMN:
-                System.out.println("Love Autumn");
-                break;
+                System.out.println("Love Autumn!");
         }
-    }
-
-    public static void print1(){
-        Season[] values = Season.values();
-        for (Season s : values){
-            System.out.println(s + " " + s.getAvgTemperature());
-            System.out.println(s + " " + s.getDescription());
-        }
-    }
-    public static void print2(){
-        Season myFavSeason = Season.valueOf("AUTUMN");
-        System.out.println(myFavSeason);
-
     }
 }

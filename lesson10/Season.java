@@ -1,23 +1,24 @@
 package com.company.lesson10;
 
 public enum Season {
-    WINTER(0),SPRING(15),SUMMER(27){
-        public String getDescription(){
+    WINTER(-10), SPRING(11), SUMMER(25) {
+        @Override
+        public String getDescription() {
             return "Теплое время года";
         }
-    },AUTUMN(14);
+    }, AUTUMN(7);
 
-    private double avgTemperature;
+    private int temp;
 
-    Season(double avgTemperature) {
-        this.avgTemperature = avgTemperature;
+    Season(int temp) {
+        this.temp = temp;
     }
 
-    public double getAvgTemperature() {
-        return avgTemperature;
+    public int getTemp() {
+        return temp;
     }
 
-    public String getDescription(){
-        return "Холодное время гщда";
+    public String getDescription() {
+        return "Холодное время года";
     }
 }

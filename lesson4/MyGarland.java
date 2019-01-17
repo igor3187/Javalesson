@@ -4,19 +4,16 @@ import java.util.Scanner;
 
 public class MyGarland {
     public static void main(String[] args) {
-        System.out.println("Приложение герлянда.");
+        System.out.println("Приложение гирлянда.");
         int i = 32;
 
         Scanner s = new Scanner(System.in);
         garlandMode(i, s);
-        if (s.hasNextInt()) {
-            s.nextInt();
-        }
     }
 
     private static void garlandMode(int i, Scanner s) {
 
-        System.out.println("Выберите режим герлянды: 1 - Мигнуть лампочками. 2 - Режим бегущей строки. 3 - Режим маски. 4 - Текущее состояние герлянды. ");
+        System.out.println("Выберите режим гирлянды: 1 - Мигнуть лампочками. 2 - Режим бегущей строки. 3 - Режим маски. 4 - Текущее состояние гирлянды. ");
 
         if (s.hasNextInt()) {
             int k = s.nextInt();
@@ -29,7 +26,7 @@ public class MyGarland {
                     run(i);
                     break;
                 case 3:
-                    getMask(i);
+                    show(i);
                     break;
                 case 4:
                     System.out.println("Лампа включена " + Integer.toBinaryString(i));
@@ -44,23 +41,27 @@ public class MyGarland {
         }
     }
 
-    private static void getMask(int i) {
-        System.out.println("Режим маски " + Integer.toBinaryString(i));
-    }
-
-    private static void run(int i) {
-        System.out.println("Бегущая строка ");
-        for (int j = 0; j < 10; j++) {
-            i = i << 1;
-            System.out.println(Integer.toBinaryString(i));
+    private static void show(int i) {
+        if (i == 1) {
+            System.out.println("Лампа включена: ");
+        }else {
+            System.out.println("Лампа выключена: ");
         }
     }
 
-    private static void blink(int i) {
+    private static void run(int a) {
+        System.out.println("Бегущая строка ");
+        for (int i = 0; i < 10; i++) {
+            i = i << 1;
+            System.out.println(Integer.toBinaryString(a));
+        }
+    }
+
+    private static void blink(int a) {
         System.out.println("Лампа мигнула ");
-        for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < 10; i++) {
             i = ~i;
-            System.out.println(Integer.toBinaryString(i));
+            System.out.println(Integer.toBinaryString(a));
         }
     }
 }
